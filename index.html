@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SAU POLL</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f7fc;
+            color: #222;
+        }
+
+        /* Navigation */
+
+        header {
+            background-color: white;
+            padding: 18px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 10px #ddd;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #5428c7;
+        }
+
+        .logo span {
+            color: #ffb703;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #444;
+            margin: 0 12px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #5428c7;
+        }
+
+        .login {
+            background-color: #5428c7;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+
+        /* Hero */
+
+        .hero {
+            min-height: 520px;
+            padding: 70px 10%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+            background: linear-gradient(120deg, #eee8ff, #fff8df);
+        }
+
+        .hero-text {
+            max-width: 600px;
+        }
+
+        .tag {
+            color: #5428c7;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #5428c7;
+        }
+
+        .hero p {
+            color: #666;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        .buttons {
+            margin-top: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 13px 23px;
+            margin-right: 10px;
+            border-radius: 7px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .primary {
+            background-color: #5428c7;
+            color: white;
+        }
+
+        .secondary {
+            background-color: white;
+            color: #5428c7;
+            border: 2px solid #5428c7;
+        }
+
+        /* Discount Card */
+
+        .discount {
+            width: 290px;
+            height: 330px;
+            background-color: #5428c7;
+            color: white;
+            border-radius: 25px;
+            text-align: center;
+            padding: 35px;
+            box-shadow: 0 15px 35px #c5b9e8;
+        }
+
+        .discount .round {
+            width: 65px;
+            height: 65px;
+            background-color: #ffcf3f;
+            color: #5428c7;
+            border-radius: 50%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        .discount h2 {
+            margin-top: 30px;
+        }
+
+        .discount strong {
+            font-size: 70px;
+            color: #ffcf3f;
+        }
+
+        /* Categories */
+
+        .categories {
+            padding: 70px 8%;
+            text-align: center;
+        }
+
+        .categories h2 {
+            color: #5428c7;
+            font-size: 34px;
+            margin-bottom: 10px;
+        }
+
+        .categories > p {
+            color: #777;
+            margin-bottom: 35px;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: 220px;
+            background-color: white;
+            padding: 28px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px #ddd;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+        }
+
+        .icon {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: #5428c7;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .card a {
+            display: inline-block;
+            margin-top: 15px;
+            color: #5428c7;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        /* Offers */
+
+        .offers {
+            background-color: #f0ecfa;
+            padding: 70px 8%;
+            text-align: center;
+        }
+
+        .offers h2 {
+            color: #5428c7;
+            font-size: 34px;
+            margin-bottom: 35px;
+        }
+
+        .offer-boxes {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .offer {
+            background-color: white;
+            width: 280px;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: left;
+            box-shadow: 0 5px 20px #ddd;
+        }
+
+        .offer h3 {
+            color: #5428c7;
+            margin: 10px 0;
+        }
+
+        .discount-text {
+            color: #e39b00;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .offer p {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* Why Section */
+
+        .why {
+            padding: 70px 8%;
+            text-align: center;
+        }
+
+        .why h2 {
+            color: #5428c7;
+            font-size: 34px;
+            margin-bottom: 35px;
+        }
+
+        .why-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .reason {
+            width: 270px;
+            padding: 25px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px #ddd;
+        }
+
+        .reason h3 {
+            color: #5428c7;
+            margin-bottom: 10px;
+        }
+
+        .reason p {
+            color: #666;
+        }
+
+        /* Footer */
+
+        footer {
+            background-color: #191229;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        footer h2 {
+            color: white;
+            margin-bottom: 8px;
+        }
+
+        footer span {
+            color: #ffcf3f;
+        }
+
+        footer p {
+            color: #aaa;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 750px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                text-align: center;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .discount {
+                width: 250px;
+                height: 300px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- Header -->
+
+    <header>
+
+        <div class="logo">
+            SAU <span>POLL</span>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="categories.html">Categories</a>
+            <a href="offers.html">Offers</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <a href="login.html" class="login">Login</a>
+
+    </header>
+
+
+    <!-- Hero Section -->
+
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <div class="tag">
+                ✨ FIND GREAT DEALS
+            </div>
+
+            <h1>
+                Discover Deals.
+                <span>Save More.</span>
+            </h1>
+
+            <p>
+                SAU POLL helps you discover useful discounts
+                on restaurants, cafés, parlours, shopping
+                and other places.
+            </p>
+
+            <div class="buttons">
+
+                <a href="offers.html" class="button primary">
+                    Explore Offers →
+                </a>
+
+                <a href="categories.html" class="button secondary">
+                    Categories
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="discount">
+
+            <div class="round">
+                SPECIAL
+            </div>
+
+            <h2>UP TO</h2>
+
+            <strong>20%</strong>
+
+            <p>DISCOUNT</p>
+
+            <br>
+
+            <p>Save money while enjoying more.</p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Categories -->
+
+    <section class="categories">
+
+        <h2>Explore Categories</h2>
+
+        <p>
+            Find offers from different places in one simple platform.
+        </p>
+
+
+        <div class="cards">
+
+            <div class="card">
+
+                <div class="icon">🍴</div>
+
+                <h3>Restaurants</h3>
+
+                <p>
+                    Discover food deals and enjoy your favourite meals.
+                </p>
+
+                <a href="categories.html">Explore →</a>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">☕</div>
+
+                <h3>Cafés</h3>
+
+                <p>
+                    Find café offers for coffee, snacks and hangouts.
+                </p>
+
+                <a href="categories.html">Explore →</a>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">💇</div>
+
+                <h3>Parlours</h3>
+
+                <p>
+                    Get discounts on beauty and grooming services.
+                </p>
+
+                <a href="categories.html">Explore →</a>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">🛍️</div>
+
+                <h3>Shopping</h3>
+
+                <p>
+                    Find useful deals and save while shopping.
+                </p>
+
+                <a href="categories.html">Explore →</a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Offers -->
+
+    <section class="offers">
+
+        <h2>Popular Offers</h2>
+
+        <div class="offer-boxes">
+
+            <div class="offer">
+
+                <div class="icon">🍔</div>
+
+                <div class="discount-text">
+                    15% OFF
+                </div>
+
+                <h3>Restaurant Deal</h3>
+
+                <p>
+                    Enjoy a special discount on selected
+                    food and dining options.
+                </p>
+
+            </div>
+
+
+            <div class="offer">
+
+                <div class="icon">☕</div>
+
+                <div class="discount-text">
+                    10% OFF
+                </div>
+
+                <h3>Café Special</h3>
+
+                <p>
+                    Grab your favourite coffee and snacks
+                    at a better price.
+                </p>
+
+            </div>
+
+
+            <div class="offer">
+
+                <div class="icon">💄</div>
+
+                <div class="discount-text">
+                    20% OFF
+                </div>
+
+                <h3>Parlour Offer</h3>
+
+                <p>
+                    Enjoy special savings on beauty
+                    and grooming services.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Why SAU POLL -->
+
+    <section class="why">
+
+        <h2>Why Choose SAU POLL?</h2>
+
+        <div class="why-container">
+
+            <div class="reason">
+
+                <h3>🔎 Easy to Find</h3>
+
+                <p>
+                    Explore different offers without
+                    searching in many places.
+                </p>
+
+            </div>
+
+
+            <div class="reason">
+
+                <h3>💰 Save Money</h3>
+
+                <p>
+                    Get useful discounts and spend
+                    less on everyday activities.
+                </p>
+
+            </div>
+
+
+            <div class="reason">
+
+                <h3>⭐ Simple to Use</h3>
+
+                <p>
+                    Browse categories and offers
+                    through a clean and simple website.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <h2>
+            SAU <span>POLL</span>
+        </h2>
+
+        <p>
+            Discover discounts. Save money. Enjoy more.
+        </p>
+
+        <br>
+
+        <p>
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
