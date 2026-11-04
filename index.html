@@ -7,360 +7,7 @@
 
     <title>SAU POLL</title>
 
-    <style>
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f7fc;
-            color: #222;
-        }
-
-        /* Navigation */
-
-        header {
-            background-color: white;
-            padding: 18px 8%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            box-shadow: 0 2px 10px #ddd;
-        }
-
-        .logo {
-            font-size: 28px;
-            font-weight: bold;
-            color: #5428c7;
-        }
-
-        .logo span {
-            color: #ffb703;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #444;
-            margin: 0 12px;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            color: #5428c7;
-        }
-
-        .login {
-            background-color: #5428c7;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 6px;
-            text-decoration: none;
-        }
-
-        /* Hero */
-
-        .hero {
-            min-height: 520px;
-            padding: 70px 10%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 50px;
-            background: linear-gradient(120deg, #eee8ff, #fff8df);
-        }
-
-        .hero-text {
-            max-width: 600px;
-        }
-
-        .tag {
-            color: #5428c7;
-            font-weight: bold;
-            letter-spacing: 2px;
-            margin-bottom: 15px;
-        }
-
-        .hero h1 {
-            font-size: 55px;
-            line-height: 1.1;
-            margin-bottom: 20px;
-        }
-
-        .hero h1 span {
-            color: #5428c7;
-        }
-
-        .hero p {
-            color: #666;
-            font-size: 18px;
-            line-height: 1.7;
-        }
-
-        .buttons {
-            margin-top: 30px;
-        }
-
-        .button {
-            display: inline-block;
-            padding: 13px 23px;
-            margin-right: 10px;
-            border-radius: 7px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .primary {
-            background-color: #5428c7;
-            color: white;
-        }
-
-        .secondary {
-            background-color: white;
-            color: #5428c7;
-            border: 2px solid #5428c7;
-        }
-
-        /* Discount Card */
-
-        .discount {
-            width: 290px;
-            height: 330px;
-            background-color: #5428c7;
-            color: white;
-            border-radius: 25px;
-            text-align: center;
-            padding: 35px;
-            box-shadow: 0 15px 35px #c5b9e8;
-        }
-
-        .discount .round {
-            width: 65px;
-            height: 65px;
-            background-color: #ffcf3f;
-            color: #5428c7;
-            border-radius: 50%;
-            margin: auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 12px;
-        }
-
-        .discount h2 {
-            margin-top: 30px;
-        }
-
-        .discount strong {
-            font-size: 70px;
-            color: #ffcf3f;
-        }
-
-        /* Categories */
-
-        .categories {
-            padding: 70px 8%;
-            text-align: center;
-        }
-
-        .categories h2 {
-            color: #5428c7;
-            font-size: 34px;
-            margin-bottom: 10px;
-        }
-
-        .categories > p {
-            color: #777;
-            margin-bottom: 35px;
-        }
-
-        .cards {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
-        }
-
-        .card {
-            width: 220px;
-            background-color: white;
-            padding: 28px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px #ddd;
-        }
-
-        .card:hover {
-            transform: translateY(-6px);
-        }
-
-        .icon {
-            font-size: 42px;
-            margin-bottom: 15px;
-        }
-
-        .card h3 {
-            color: #5428c7;
-            margin-bottom: 10px;
-        }
-
-        .card p {
-            color: #666;
-            font-size: 14px;
-            line-height: 1.5;
-        }
-
-        .card a {
-            display: inline-block;
-            margin-top: 15px;
-            color: #5428c7;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-        /* Offers */
-
-        .offers {
-            background-color: #f0ecfa;
-            padding: 70px 8%;
-            text-align: center;
-        }
-
-        .offers h2 {
-            color: #5428c7;
-            font-size: 34px;
-            margin-bottom: 35px;
-        }
-
-        .offer-boxes {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
-        }
-
-        .offer {
-            background-color: white;
-            width: 280px;
-            padding: 30px;
-            border-radius: 15px;
-            text-align: left;
-            box-shadow: 0 5px 20px #ddd;
-        }
-
-        .offer h3 {
-            color: #5428c7;
-            margin: 10px 0;
-        }
-
-        .discount-text {
-            color: #e39b00;
-            font-weight: bold;
-            font-size: 20px;
-        }
-
-        .offer p {
-            color: #666;
-            line-height: 1.5;
-        }
-
-        /* Why Section */
-
-        .why {
-            padding: 70px 8%;
-            text-align: center;
-        }
-
-        .why h2 {
-            color: #5428c7;
-            font-size: 34px;
-            margin-bottom: 35px;
-        }
-
-        .why-container {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
-        }
-
-        .reason {
-            width: 270px;
-            padding: 25px;
-            background-color: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px #ddd;
-        }
-
-        .reason h3 {
-            color: #5428c7;
-            margin-bottom: 10px;
-        }
-
-        .reason p {
-            color: #666;
-        }
-
-        /* Footer */
-
-        footer {
-            background-color: #191229;
-            color: white;
-            text-align: center;
-            padding: 30px;
-        }
-
-        footer h2 {
-            color: white;
-            margin-bottom: 8px;
-        }
-
-        footer span {
-            color: #ffcf3f;
-        }
-
-        footer p {
-            color: #aaa;
-        }
-
-        /* Mobile */
-
-        @media (max-width: 750px) {
-
-            header {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            nav {
-                text-align: center;
-            }
-
-            nav a {
-                display: inline-block;
-                margin: 5px;
-            }
-
-            .hero {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .hero h1 {
-                font-size: 40px;
-            }
-
-            .discount {
-                width: 250px;
-                height: 300px;
-            }
-
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 
@@ -527,61 +174,64 @@
 
         <h2>Popular Offers</h2>
 
-        <div class="offer-boxes">
+        <div class="offer-tools">
+            <input
+                type="search"
+                id="offerSearch"
+                class="offer-search"
+                placeholder="Search restaurants, cafés, parlours or shops..."
+                aria-label="Search offers"
+            >
 
-            <div class="offer">
+            <div class="filter-buttons" aria-label="Filter offers by category">
+                <button class="filter-btn active" type="button" data-filter="all">All Offers</button>
+                <button class="filter-btn" type="button" data-filter="restaurant">Restaurants</button>
+                <button class="filter-btn" type="button" data-filter="cafe">Cafés</button>
+                <button class="filter-btn" type="button" data-filter="parlour">Parlours</button>
+                <button class="filter-btn" type="button" data-filter="shopping">Shopping</button>
+            </div>
 
+            <button class="favourites-toggle" id="showFavourites" type="button" aria-pressed="false">
+                ♥ Show My Favourites
+            </button>
+            <p class="offer-count" id="offerCount" aria-live="polite">Showing all offers</p>
+        </div>
+
+        <div class="offer-boxes" id="offerList">
+
+            <div class="offer" data-category="restaurant">
+                <button class="offer-favourite" type="button" aria-label="Add Restaurant Deal to favourites" aria-pressed="false">♡</button>
                 <div class="icon">🍔</div>
-
-                <div class="discount-text">
-                    15% OFF
-                </div>
-
+                <div class="discount-text">15% OFF</div>
                 <h3>Restaurant Deal</h3>
-
-                <p>
-                    Enjoy a special discount on selected
-                    food and dining options.
-                </p>
-
+                <p>Enjoy a special discount on selected food and dining options.</p>
             </div>
 
-
-            <div class="offer">
-
+            <div class="offer" data-category="cafe">
+                <button class="offer-favourite" type="button" aria-label="Add Café Special to favourites" aria-pressed="false">♡</button>
                 <div class="icon">☕</div>
-
-                <div class="discount-text">
-                    10% OFF
-                </div>
-
+                <div class="discount-text">10% OFF</div>
                 <h3>Café Special</h3>
-
-                <p>
-                    Grab your favourite coffee and snacks
-                    at a better price.
-                </p>
-
+                <p>Grab your favourite coffee and snacks at a better price.</p>
             </div>
 
-
-            <div class="offer">
-
+            <div class="offer" data-category="parlour">
+                <button class="offer-favourite" type="button" aria-label="Add Parlour Offer to favourites" aria-pressed="false">♡</button>
                 <div class="icon">💄</div>
-
-                <div class="discount-text">
-                    20% OFF
-                </div>
-
+                <div class="discount-text">20% OFF</div>
                 <h3>Parlour Offer</h3>
-
-                <p>
-                    Enjoy special savings on beauty
-                    and grooming services.
-                </p>
-
+                <p>Enjoy special savings on beauty and grooming services.</p>
             </div>
 
+            <div class="offer" data-category="shopping">
+                <button class="offer-favourite" type="button" aria-label="Add Shopping Discount to favourites" aria-pressed="false">♡</button>
+                <div class="icon">🛍️</div>
+                <div class="discount-text">Up to 25% OFF</div>
+                <h3>Shopping Discount</h3>
+                <p>Save on selected clothing, accessories and everyday shopping.</p>
+            </div>
+
+            <p class="offer-empty" id="noOffers">No offers found. Try another search or category.</p>
         </div>
 
     </section>
@@ -649,11 +299,11 @@
 
         <br>
 
-        <p>
-        </p>
+        <p>Made for the SAU student community.</p>
 
     </footer>
 
+    <script src="script.js"></script>
 </body>
 
 </html>
