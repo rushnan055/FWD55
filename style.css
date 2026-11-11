@@ -150,7 +150,18 @@
         }
 
         /* Categories */
-
+.category-search {
+    display: block;
+    width: 850px;
+    max-width: 95%;
+    height: 75px;
+    padding: 22px 25px;
+    margin: 0 auto 36px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    font-size: 22px;
+    outline: none;
+}
         .categories {
             padding: 70px 8%;
             text-align: center;
@@ -468,4 +479,33 @@
         padding: 9px 13px;
         font-size: 13px;
     }
+}
+.primary {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.offer-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 35px;
+}
+
+.offer-card {
+    background: white;
+    padding: 35px;
+    width: 280px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px #ddd;
+}
+
+.offer-card h1 {
+    color: #5428c7;
+    margin: 20px 0;
+}
+
+.offer-card p {
+    color: #666;
 }

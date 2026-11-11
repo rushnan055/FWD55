@@ -1,309 +1,792 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAU POLL</title>
 
-    <title>SAU POLL</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
 
-    <link rel="stylesheet" href="style.css">
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f7fc;
+    color: #252525;
+}
+
+header {
+    background: white;
+    padding: 18px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px #ddd;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #5428c7;
+}
+
+.logo b {
+    color: #ffb703;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #5428c7;
+}
+
+button {
+    cursor: pointer;
+    font-size: 15px;
+    border: none;
+}
+
+.primary, .login-btn {
+    background: #5428c7;
+    color: white;
+    padding: 14px 24px;
+    border-radius: 8px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.primary:hover, .login-btn:hover {
+    background: #3e1c9c;
+}
+
+.secondary {
+    background: white;
+    color: #5428c7;
+    border: 2px solid #5428c7;
+    padding: 13px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+section {
+    padding: 80px 5%;
+    text-align: center;
+    scroll-margin-top: 85px;
+}
+
+.section-title {
+    color: #5428c7;
+    font-size: 36px;
+    margin-bottom: 18px;
+}
+
+.section-description {
+    color: #666;
+    margin-bottom: 35px;
+    line-height: 1.7;
+}
+
+/* HOME */
+
+#home {
+    min-height: 620px;
+    padding: 100px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    background: linear-gradient(110deg, #eee7ff, #fff8df);
+    text-align: left;
+}
+
+.hero-text {
+    max-width: 700px;
+}
+
+.hero-text h1 {
+    font-size: 60px;
+    margin: 25px 0;
+    line-height: 1.15;
+}
+
+.hero-text h1 span {
+    color: #5428c7;
+}
+
+.hero-text p {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #666;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.discount {
+    background: #5428c7;
+    color: white;
+    width: 290px;
+    min-width: 250px;
+    height: 350px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.discount h2 {
+    color: #ffce36;
+    font-size: 65px;
+}
+
+.discount h3 {
+    font-size: 27px;
+}
+
+.discount p {
+    color: #ffce36;
+}
+
+/* SEARCH */
+
+.search-box {
+    max-width: 600px;
+    margin: 25px auto;
+    display: flex;
+    gap: 10px;
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 0;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+/* CATEGORIES */
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 22px;
+    margin-top: 35px;
+}
+
+.category-card {
+    background: white;
+    padding: 30px 15px;
+    border-radius: 15px;
+    box-shadow: 0 3px 12px #ddd;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.category-card:hover {
+    transform: translateY(-6px);
+}
+
+.category-card .emoji {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.category-card h3 {
+    color: #5428c7;
+    margin-bottom: 10px;
+}
+
+/* OFFERS */
+
+#offers {
+    background: #eee7ff;
+}
+
+.offer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.offer-card {
+    background: white;
+    padding: 35px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px #ddd;
+}
+
+.offer-card h2 {
+    color: #5428c7;
+}
+
+.offer-card h1 {
+    font-size: 40px;
+    color: #e9a400;
+    margin: 20px 0;
+}
+
+/* ABOUT */
+
+#about {
+    background: white;
+}
+
+.about-content {
+    max-width: 850px;
+    margin: auto;
+    line-height: 1.9;
+    color: #555;
+    font-size: 18px;
+}
+
+.about-content h3 {
+    color: #5428c7;
+    margin: 25px 0 10px;
+}
+
+/* CONTACT */
+
+#contact {
+    background: #eee7ff;
+}
+
+.contact-form {
+    max-width: 550px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.login-form input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+}
+
+.contact-form textarea {
+    height: 130px;
+    resize: vertical;
+}
+
+/* LOGIN POPUP */
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 200;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal-content {
+    background: white;
+    width: 100%;
+    max-width: 420px;
+    padding: 35px;
+    border-radius: 15px;
+    position: relative;
+    text-align: center;
+}
+
+.modal-content h2 {
+    color: #5428c7;
+    margin-bottom: 20px;
+}
+
+.close {
+    position: absolute;
+    right: 18px;
+    top: 12px;
+    font-size: 28px;
+    background: none;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-form button {
+    width: 100%;
+}
+
+.modal-content p {
+    margin-top: 15px;
+    color: #666;
+}
+
+/* FOOTER */
+
+footer {
+    background: #24134f;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+footer span {
+    color: #ffb703;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 850px) {
+    header {
+        justify-content: center;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    #home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 42px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+}
+
+@media(max-width: 500px) {
+    nav {
+        gap: 12px;
+        font-size: 13px;
+    }
+
+    .logo {
+        font-size: 27px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .discount {
+        width: 100%;
+    }
+}
+</style>
 </head>
-
 
 <body>
 
-    <!-- Header -->
+<!-- NAVIGATION -->
 
-    <header>
+<header>
+    <div class="logo">
+        SAU <span>POLL</span><b>.</b>
+    </div>
 
-        <div class="logo">
-            SAU <span>POLL</span>
-        </div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#categories">Categories</a>
+        <a href="#offers">Offers</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <button class="login-btn" onclick="openLogin()">Login</button>
+    </nav>
+</header>
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="categories.html">Categories</a>
-            <a href="offers.html">Offers</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+<!-- HOME -->
 
-        <a href="login.html" class="login">Login</a>
+<section id="home">
 
-    </header>
+    <div class="hero-text">
+        <p>WELCOME TO SAU POLL</p>
 
-
-    <!-- Hero Section -->
-
-    <section class="hero">
-
-        <div class="hero-text">
-
-            <div class="tag">
-                ✨ FIND GREAT DEALS
-            </div>
-
-            <h1>
-                Discover Deals.
-                <span>Save More.</span>
-            </h1>
-
-            <p>
-                SAU POLL helps you discover useful discounts
-                on restaurants, cafés, parlours, shopping
-                and other places.
-            </p>
-
-            <div class="buttons">
-
-                <a href="offers.html" class="button primary">
-                    Explore Offers →
-                </a>
-
-                <a href="categories.html" class="button secondary">
-                    Categories
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <div class="discount">
-
-            <div class="round">
-                SPECIAL
-            </div>
-
-            <h2>UP TO</h2>
-
-            <strong>20%</strong>
-
-            <p>DISCOUNT</p>
-
-            <br>
-
-            <p>Save money while enjoying more.</p>
-
-        </div>
-
-    </section>
-
-
-    <!-- Categories -->
-
-    <section class="categories">
-
-        <h2>Explore Categories</h2>
+        <h1>
+            Discover Local <span>Deals</span>
+            Around SAU!
+        </h1>
 
         <p>
-            Find offers from different places in one simple platform.
+            Find the best restaurants, cafes, shops and services
+            near South Asian University with exclusive student discounts.
         </p>
 
+        <div class="hero-buttons">
+            <a href="#offers" class="primary">Explore Offers →</a>
+            <a href="#categories" class="secondary">Browse Categories</a>
+        </div>
+    </div>
 
-        <div class="cards">
+    <div class="discount">
+        <h3>STUDENT SPECIAL</h3>
+        <h2>20%</h2>
+        <h3>OFF</h3>
+        <p>EXCLUSIVE SAU DEALS</p>
+    </div>
 
-            <div class="card">
+</section>
 
-                <div class="icon">🍴</div>
+<!-- CATEGORIES -->
 
-                <h3>Restaurants</h3>
+<section id="categories">
 
-                <p>
-                    Discover food deals and enjoy your favourite meals.
-                </p>
+    <h1 class="section-title">Explore Categories</h1>
 
-                <a href="categories.html">Explore →</a>
+    <p class="section-description">
+        Find everything you need around your university.
+    </p>
 
-            </div>
+    <div class="search-box">
+        <input type="text" id="searchInput"
+        placeholder="Search restaurants, cafes, shops..."
+        oninput="searchCategories()">
+    </div>
 
+    <div class="categories" id="categoryList">
 
-            <div class="card">
-
-                <div class="icon">☕</div>
-
-                <h3>Cafés</h3>
-
-                <p>
-                    Find café offers for coffee, snacks and hangouts.
-                </p>
-
-                <a href="categories.html">Explore →</a>
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="icon">💇</div>
-
-                <h3>Parlours</h3>
-
-                <p>
-                    Get discounts on beauty and grooming services.
-                </p>
-
-                <a href="categories.html">Explore →</a>
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="icon">🛍️</div>
-
-                <h3>Shopping</h3>
-
-                <p>
-                    Find useful deals and save while shopping.
-                </p>
-
-                <a href="categories.html">Explore →</a>
-
-            </div>
-
+        <div class="category-card" data-name="restaurant food">
+            <div class="emoji">🍔</div>
+            <h3>Restaurants</h3>
+            <p>Delicious food and student discounts.</p>
         </div>
 
-    </section>
+        <div class="category-card" data-name="cafe coffee">
+            <div class="emoji">☕</div>
+            <h3>Cafes</h3>
+            <p>Find your favourite coffee spots.</p>
+        </div>
 
+        <div class="category-card" data-name="shopping stores">
+            <div class="emoji">🛍️</div>
+            <h3>Shopping</h3>
+            <p>Shop more and spend less.</p>
+        </div>
 
-    <!-- Offers -->
+        <div class="category-card" data-name="salon beauty">
+            <div class="emoji">💇</div>
+            <h3>Beauty & Salon</h3>
+            <p>Beauty services at special prices.</p>
+        </div>
 
-    <section class="offers">
+        <div class="category-card" data-name="fitness gym">
+            <div class="emoji">🏋️</div>
+            <h3>Fitness</h3>
+            <p>Stay healthy and active.</p>
+        </div>
 
-        <h2>Popular Offers</h2>
+        <div class="category-card" data-name="entertainment">
+            <div class="emoji">🎬</div>
+            <h3>Entertainment</h3>
+            <p>Explore fun activities.</p>
+        </div>
 
-        <div class="offer-tools">
-            <input
-                type="search"
-                id="offerSearch"
-                class="offer-search"
-                placeholder="Search restaurants, cafés, parlours or shops..."
-                aria-label="Search offers"
-            >
+    </div>
 
-            <div class="filter-buttons" aria-label="Filter offers by category">
-                <button class="filter-btn active" type="button" data-filter="all">All Offers</button>
-                <button class="filter-btn" type="button" data-filter="restaurant">Restaurants</button>
-                <button class="filter-btn" type="button" data-filter="cafe">Cafés</button>
-                <button class="filter-btn" type="button" data-filter="parlour">Parlours</button>
-                <button class="filter-btn" type="button" data-filter="shopping">Shopping</button>
-            </div>
+    <p id="noResults" style="display:none; margin-top:20px;">
+        No categories found.
+    </p>
 
-            <button class="favourites-toggle" id="showFavourites" type="button" aria-pressed="false">
-                ♥ Show My Favourites
+</section>
+
+<!-- OFFERS -->
+
+<section id="offers">
+
+    <h1 class="section-title">Latest Offers</h1>
+
+    <p class="section-description">
+        Enjoy exclusive discounts for SAU students!
+    </p>
+
+    <div class="offer-container">
+
+        <div class="offer-card">
+            <h2>🍔 Restaurants</h2>
+            <h1>20% OFF</h1>
+            <p>Special discounts on food.</p>
+        </div>
+
+        <div class="offer-card">
+            <h2>🛍️ Shopping</h2>
+            <h1>15% OFF</h1>
+            <p>Save money while shopping.</p>
+        </div>
+
+        <div class="offer-card">
+            <h2>💇 Beauty & Salon</h2>
+            <h1>10% OFF</h1>
+            <p>Enjoy beauty services for less.</p>
+        </div>
+
+        <div class="offer-card">
+            <h2>☕ Cafes</h2>
+            <h1>15% OFF</h1>
+            <p>Special coffee and cafe deals.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <h1 class="section-title">About SAU POLL</h1>
+
+    <div class="about-content">
+
+        <p>
+            SAU POLL is a student-focused platform designed
+            especially for students of South Asian University.
+            It helps students discover nearby restaurants,
+            cafes, shopping stores, salons and other services.
+        </p>
+
+        <h3>Our Mission</h3>
+
+        <p>
+            Our mission is to make student life easier and
+            more affordable by connecting students with
+            local businesses offering exclusive discounts.
+        </p>
+
+        <h3>Why SAU POLL?</h3>
+
+        <p>
+            Discover nearby places, save money, explore
+            exciting offers and support local businesses.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+    <h1 class="section-title">Contact Us</h1>
+
+    <p class="section-description">
+        Have a question or suggestion? Send us a message.
+    </p>
+
+    <form class="contact-form" onsubmit="sendMessage(event)">
+
+        <input type="text" id="contactName"
+        placeholder="Your Name" required>
+
+        <input type="email" id="contactEmail"
+        placeholder="Your Email" required>
+
+        <textarea id="contactMessage"
+        placeholder="Write your message..." required></textarea>
+
+        <button class="primary" type="submit">
+            Send Message
+        </button>
+
+    </form>
+
+    <p id="contactStatus" style="margin-top:20px;"></p>
+
+</section>
+
+<!-- LOGIN POPUP -->
+
+<div class="modal" id="loginModal">
+
+    <div class="modal-content">
+
+        <button class="close" onclick="closeLogin()">×</button>
+
+        <h2 id="loginTitle">Student Login</h2>
+
+        <form class="login-form" id="loginForm"
+        onsubmit="handleLogin(event)">
+
+            <input type="email" id="loginEmail"
+            placeholder="University Email" required>
+
+            <input type="password" id="loginPassword"
+            placeholder="Password" required minlength="6">
+
+            <button class="primary" type="submit">
+                Login
             </button>
-            <p class="offer-count" id="offerCount" aria-live="polite">Showing all offers</p>
-        </div>
 
-        <div class="offer-boxes" id="offerList">
+        </form>
 
-            <div class="offer" data-category="restaurant">
-                <button class="offer-favourite" type="button" aria-label="Add Restaurant Deal to favourites" aria-pressed="false">♡</button>
-                <div class="icon">🍔</div>
-                <div class="discount-text">15% OFF</div>
-                <h3>Restaurant Deal</h3>
-                <p>Enjoy a special discount on selected food and dining options.</p>
-            </div>
-
-            <div class="offer" data-category="cafe">
-                <button class="offer-favourite" type="button" aria-label="Add Café Special to favourites" aria-pressed="false">♡</button>
-                <div class="icon">☕</div>
-                <div class="discount-text">10% OFF</div>
-                <h3>Café Special</h3>
-                <p>Grab your favourite coffee and snacks at a better price.</p>
-            </div>
-
-            <div class="offer" data-category="parlour">
-                <button class="offer-favourite" type="button" aria-label="Add Parlour Offer to favourites" aria-pressed="false">♡</button>
-                <div class="icon">💄</div>
-                <div class="discount-text">20% OFF</div>
-                <h3>Parlour Offer</h3>
-                <p>Enjoy special savings on beauty and grooming services.</p>
-            </div>
-
-            <div class="offer" data-category="shopping">
-                <button class="offer-favourite" type="button" aria-label="Add Shopping Discount to favourites" aria-pressed="false">♡</button>
-                <div class="icon">🛍️</div>
-                <div class="discount-text">Up to 25% OFF</div>
-                <h3>Shopping Discount</h3>
-                <p>Save on selected clothing, accessories and everyday shopping.</p>
-            </div>
-
-            <p class="offer-empty" id="noOffers">No offers found. Try another search or category.</p>
-        </div>
-
-    </section>
-
-
-    <!-- Why SAU POLL -->
-
-    <section class="why">
-
-        <h2>Why Choose SAU POLL?</h2>
-
-        <div class="why-container">
-
-            <div class="reason">
-
-                <h3>🔎 Easy to Find</h3>
-
-                <p>
-                    Explore different offers without
-                    searching in many places.
-                </p>
-
-            </div>
-
-
-            <div class="reason">
-
-                <h3>💰 Save Money</h3>
-
-                <p>
-                    Get useful discounts and spend
-                    less on everyday activities.
-                </p>
-
-            </div>
-
-
-            <div class="reason">
-
-                <h3>⭐ Simple to Use</h3>
-
-                <p>
-                    Browse categories and offers
-                    through a clean and simple website.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Footer -->
-
-    <footer>
-
-        <h2>
-            SAU <span>POLL</span>
-        </h2>
+        <p id="loginStatus"></p>
 
         <p>
-            Discover discounts. Save money. Enjoy more.
+            New student?
+            <a href="#" onclick="showRegister(event)"
+            style="color:#5428c7;">Register here</a>
         </p>
 
-        <br>
+    </div>
 
-        <p>Made for the SAU student community.</p>
+</div>
 
-    </footer>
+<!-- FOOTER -->
 
-    <script src="script.js"></script>
+<footer>
+    <h2>SAU <span>POLL.</span></h2>
+    <p>Discover Deals. Save More. Live Better.</p>
+    <p style="margin-top:15px;">
+        © 2026 SAU POLL. All Rights Reserved.
+    </p>
+</footer>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+// LOGIN POPUP
+
+function openLogin() {
+    document.getElementById("loginModal").style.display = "flex";
+}
+
+function closeLogin() {
+    document.getElementById("loginModal").style.display = "none";
+}
+
+window.addEventListener("click", function(event) {
+    let modal = document.getElementById("loginModal");
+
+    if (event.target === modal) {
+        closeLogin();
+    }
+});
+
+// LOGIN FORM
+
+function handleLogin(event) {
+    event.preventDefault();
+
+    let email = document.getElementById("loginEmail").value;
+    let password = document.getElementById("loginPassword").value;
+
+    if (email && password.length >= 6) {
+        document.getElementById("loginStatus").innerText =
+        "Login form submitted successfully! Connect a backend to verify your account.";
+    }
+}
+
+// REGISTER
+
+function showRegister(event) {
+    event.preventDefault();
+
+    document.getElementById("loginTitle").innerText =
+    "Student Registration";
+
+    document.getElementById("loginForm").innerHTML = `
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="University Email" required>
+        <input type="password" placeholder="Create Password"
+        minlength="6" required>
+        <button class="primary" type="submit">
+            Register
+        </button>
+    `;
+
+    document.getElementById("loginForm").onsubmit = function(event) {
+        event.preventDefault();
+        document.getElementById("loginStatus").innerText =
+        "Registration form submitted! A backend is needed to create your account.";
+    };
+}
+
+// CATEGORY SEARCH
+
+function searchCategories() {
+
+    let search = document.getElementById("searchInput")
+    .value.toLowerCase();
+
+    let cards = document.querySelectorAll(".category-card");
+    let count = 0;
+
+    cards.forEach(function(card) {
+
+        let name = card.dataset.name;
+
+        if (name.includes(search)) {
+            card.style.display = "block";
+            count++;
+        } else {
+            card.style.display = "none";
+        }
+
+    });
+
+    document.getElementById("noResults").style.display =
+    count === 0 ? "block" : "none";
+}
+
+// CONTACT FORM
+
+function sendMessage(event) {
+
+    event.preventDefault();
+
+    let name = document.getElementById("contactName").value;
+
+    document.getElementById("contactStatus").innerText =
+    "Thank you, " + name + "! Your message has been entered successfully.";
+
+    event.target.reset();
+}
+
+</script>
+
 </body>
-
 </html>
+
