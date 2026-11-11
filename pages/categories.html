@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories | SAU POOL</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js" defer></script>
+</head>
+<body>
+
+<header>
+    <div class="logo">SAU <span>POOL</span><b>.</b></div>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="categories.html">Categories</a>
+        <a href="offers.html">Offers</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html" class="login-btn">Login</a>
+    </nav>
+</header>
+
+<main>
+<section class="page-intro">
+    <h1 class="section-title">Explore Categories</h1>
+    <p>Find restaurants, cafes, shops and services around Chhattarpur and South Delhi.</p>
+
+    <div class="search-box">
+        <input type="text" id="categorySearch"
+        placeholder="Search restaurants, cafes, shops...">
+    </div>
+</section>
+
+<section class="business-section">
+
+    <div id="restaurants">
+        <h2>🍔 Restaurants</h2>
+        <p class="category-lead">Enjoy meals and delicious food with student-friendly deals.</p>
+
+        <div class="business-grid">
+            <article class="business-card" data-search="gianis restaurant ice cream dessert chhattarpur">
+                <h3>Giani's</h3>
+                <p>📍 Chhattarpur / nearby South Delhi area</p>
+                <p>Ice cream, desserts and quick treats.</p>
+                <strong>Sample student discount: 10% OFF</strong>
+            </article>
+
+            <article class="business-card" data-search="haldirams restaurant food snacks">
+                <h3>Haldiram's</h3>
+                <p>📍 Nearby South Delhi outlets</p>
+                <p>Indian snacks, sweets and meals.</p>
+                <strong>Sample student discount: 10% OFF</strong>
+            </article>
+
+            <article class="business-card" data-search="dominos pizza restaurant">
+                <h3>Domino's</h3>
+                <p>📍 Nearby Chhattarpur area</p>
+                <p>Pizza, sides and meal combos.</p>
+                <strong>Sample student discount: 15% OFF</strong>
+            </article>
+        </div>
+    </div>
+
+    <div id="cafes">
+        <h2>☕ Cafes</h2>
+        <p class="category-lead">Find coffee shops and relaxing places to meet friends.</p>
+
+        <div class="business-grid">
+            <article class="business-card" data-search="local cafe coffee chhattarpur">
+                <h3>Chhattarpur Local Cafes</h3>
+                <p>📍 Chhattarpur market area</p>
+                <p>Nearby cafes for coffee and snacks.</p>
+                <strong>Sample student discount: 10% OFF</strong>
+            </article>
+
+            <article class="business-card" data-search="coffee cafe south delhi">
+                <h3>Neighbourhood Coffee Spots</h3>
+                <p>📍 Chhattarpur and nearby areas</p>
+                <p>Independent cafes and coffee counters.</p>
+                <strong>Sample student discount: 15% OFF</strong>
+            </article>
+        </div>
+    </div>
+
+    <div id="shopping">
+        <h2>🛍️ Shopping</h2>
+        <p class="category-lead">Shop for clothing, lifestyle products and everyday needs.</p>
+
+        <div class="business-grid">
+            <article class="business-card" data-search="chhattarpur market shopping clothes stores">
+                <h3>Chhattarpur Local Market</h3>
+                <p>📍 Chhattarpur market</p>
+                <p>Daily essentials, clothing and local stores.</p>
+                <strong>Sample student discount: 10% OFF</strong>
+            </article>
+
+            <article class="business-card" data-search="dhan mill shopping lifestyle">
+                <h3>The Dhan Mill</h3>
+                <p>📍 Chhattarpur, New Delhi</p>
+                <p>Shopping, lifestyle and food destination.</p>
+                <strong>Sample offer: selected-store deal</strong>
+            </article>
+        </div>
+    </div>
+
+    <div id="beauty">
+        <h2>💇 Beauty & Salon</h2>
+        <p class="category-lead">Find beauty, hair and grooming services.</p>
+
+        <div class="business-grid">
+            <article class="business-card" data-search="geetanjali salon parlour beauty">
+                <h3>Geetanjali Salon</h3>
+                <p>📍 Chhattarpur / South Delhi branch area</p>
+                <p>Hair, salon and beauty services.</p>
+                <strong>Sample student discount: 10% OFF</strong>
+            </article>
+
+            <article class="business-card" data-search="local parlour salon beauty">
+                <h3>Local Beauty Parlours</h3>
+                <p>📍 Chhattarpur market area</p>
+                <p>Everyday grooming and beauty services.</p>
+                <strong>Sample student discount: 10% OFF</strong>
+            </article>
+        </div>
+    </div>
+
+    <div id="fitness">
+        <h2>🏋️ Fitness</h2>
+        <p class="category-lead">Stay active and healthy with nearby fitness options.</p>
+
+        <div class="business-grid">
+            <article class="business-card" data-search="gym fitness chhattarpur">
+                <h3>Local Gyms</h3>
+                <p>📍 Chhattarpur and nearby areas</p>
+                <p>Workout spaces and fitness memberships.</p>
+                <strong>Sample offer: ask in store</strong>
+            </article>
+        </div>
+    </div>
+
+    <div id="entertainment">
+        <h2>🎬 Entertainment</h2>
+        <p class="category-lead">Enjoy movies and leisure activities around South Delhi.</p>
+
+        <div class="business-grid">
+            <article class="business-card" data-search="cinema movie entertainment">
+                <h3>Nearby Cinemas</h3>
+                <p>📍 South Delhi</p>
+                <p>Movie outings and leisure activities.</p>
+                <strong>Sample offer: check student pricing</strong>
+            </article>
+        </div>
+    </div>
+
+    <p id="noCategoryResults" class="notice" hidden>No matching places found.</p>
+
+    <p class="notice">
+        Business locations and discounts are examples for this project.
+        Confirm the exact branch, address and current discount directly
+        with each business before visiting.
+    </p>
+</section>
+</main>
+
+<footer class="page-footer">
+    <h2>SAU <span>POOL.</span></h2>
+    <p>Discover Deals. Save More. Live Better.</p>
+    <p>© 2026 SAU POOL. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

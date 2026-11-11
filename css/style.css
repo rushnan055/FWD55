@@ -1,0 +1,588 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f7fc;
+    color: #252525;
+}
+
+header {
+    background: white;
+    padding: 18px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px #ddd;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #5428c7;
+}
+
+.logo b,
+footer span {
+    color: #ffb703;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #5428c7;
+}
+
+button {
+    cursor: pointer;
+    font-size: 15px;
+    border: none;
+}
+
+.primary,
+.login-btn {
+    background: #5428c7;
+    color: white;
+    padding: 14px 24px;
+    border-radius: 8px;
+    display: inline-block;
+    text-decoration: none;
+    border: none;
+}
+
+.primary:hover,
+.login-btn:hover {
+    background: #3e1c9c;
+}
+
+.secondary {
+    background: white;
+    color: #5428c7;
+    border: 2px solid #5428c7;
+    padding: 13px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+section {
+    padding: 80px 5%;
+    text-align: center;
+    scroll-margin-top: 85px;
+}
+
+.section-title {
+    color: #5428c7;
+    font-size: 36px;
+    margin-bottom: 18px;
+}
+
+.section-description {
+    color: #666;
+    margin-bottom: 35px;
+    line-height: 1.7;
+}
+
+/* HOME PAGE */
+
+.hero {
+    min-height: 620px;
+    padding: 100px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    background: linear-gradient(110deg, #eee7ff, #fff8df);
+    text-align: left;
+}
+
+.hero-text {
+    max-width: 750px;
+}
+
+.welcome {
+    color: #666;
+    font-size: 20px;
+}
+
+.hero-text h1 {
+    font-size: 60px;
+    margin: 25px 0;
+    line-height: 1.15;
+}
+
+.hero-text h1 span {
+    color: #5428c7;
+}
+
+.hero-text p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.discount {
+    background: #5428c7;
+    color: white;
+    width: 300px;
+    min-width: 250px;
+    height: 360px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.discount h2 {
+    color: #ffce36;
+    font-size: 65px;
+}
+
+.discount h3 {
+    font-size: 27px;
+}
+
+.discount p {
+    color: #ffce36;
+}
+
+/* HOME INFORMATION CARDS */
+
+.reason-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+    margin-top: 35px;
+}
+
+.reason-card {
+    background: white;
+    padding: 30px 22px;
+    border-radius: 15px;
+    box-shadow: 0 3px 12px #ddd;
+    transition: 0.3s;
+}
+
+.reason-card:hover,
+.category-card:hover,
+.offer-card:hover,
+.business-card:hover {
+    transform: translateY(-6px);
+}
+
+.reason-card h3 {
+    color: #5428c7;
+    margin: 15px 0;
+}
+
+.reason-card p {
+    color: #666;
+    line-height: 1.7;
+}
+
+.emoji {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+/* CATEGORY CARDS */
+
+.category-section {
+    background: #f0e9ff;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 22px;
+    margin-top: 35px;
+}
+
+.category-card {
+    background: white;
+    padding: 30px 15px;
+    border-radius: 15px;
+    box-shadow: 0 3px 12px #ddd;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+    color: #252525;
+}
+
+.category-card h3 {
+    color: #5428c7;
+    margin-bottom: 10px;
+}
+
+.category-card p {
+    color: #555;
+}
+
+/* OFFERS */
+
+.offers-section {
+    background: #eee7ff;
+}
+
+.offer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin: 35px 0;
+}
+
+.offer-card {
+    background: white;
+    padding: 35px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px #ddd;
+    transition: 0.3s;
+}
+
+.offer-card h2 {
+    color: #5428c7;
+}
+
+.offer-card h1 {
+    font-size: 40px;
+    color: #e9a400;
+    margin: 20px 0;
+}
+
+.view-all {
+    margin-top: 20px;
+}
+
+/* INNER PAGE INTRO */
+
+.page-intro {
+    background: linear-gradient(110deg, #eee7ff, #fff8df);
+    padding: 65px 5%;
+    text-align: center;
+}
+
+.page-intro p {
+    color: #666;
+    line-height: 1.7;
+}
+
+.search-box {
+    max-width: 650px;
+    margin: 25px auto;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #ccc;
+    border-radius: 9px;
+    font-size: 16px;
+}
+
+.business-section {
+    padding: 45px 5%;
+    text-align: left;
+}
+
+.business-section h2 {
+    color: #5428c7;
+    font-size: 29px;
+    margin: 30px 0 10px;
+}
+
+.category-lead {
+    color: #666;
+    margin-bottom: 18px;
+}
+
+.business-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+    margin: 20px 0 35px;
+}
+
+.business-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 3px 12px #ddd;
+    transition: 0.3s;
+}
+
+.business-card h3 {
+    color: #5428c7;
+    margin-bottom: 12px;
+}
+
+.business-card p {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 8px;
+}
+
+.business-card strong {
+    display: block;
+    color: #d99500;
+    margin-top: 15px;
+}
+
+.business-card[hidden],
+.offer[hidden] {
+    display: none !important;
+}
+
+.notice {
+    background: #fff8df;
+    border-left: 4px solid #ffb703;
+    padding: 15px 18px;
+    margin: 25px auto;
+    border-radius: 7px;
+    color: #66531d;
+    line-height: 1.6;
+}
+
+/* OFFER FILTERS */
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 15px auto 22px;
+}
+
+.filter-btn {
+    background: white;
+    color: #5428c7;
+    border: 1px solid #5428c7;
+    padding: 10px 17px;
+    border-radius: 22px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: #5428c7;
+    color: white;
+}
+
+.favourites-toggle {
+    background: #ffcf3f;
+    color: #33205f;
+    padding: 11px 18px;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+.offer-favourite {
+    float: right;
+    background: white;
+    color: #5428c7;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+}
+
+.offer-favourite.saved {
+    color: #e53965;
+}
+
+/* ABOUT PAGE */
+
+#about {
+    background: white;
+}
+
+.about-content {
+    max-width: 900px;
+    margin: auto;
+    line-height: 1.9;
+    color: #555;
+    font-size: 18px;
+}
+
+.about-content h3 {
+    color: #5428c7;
+    margin: 25px 0 10px;
+}
+
+/* CONTACT PAGE */
+
+#contact {
+    background: #eee7ff;
+}
+
+.contact-form {
+    max-width: 550px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.auth-form input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+}
+
+.contact-form textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.form-feedback {
+    color: #5428c7;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+/* LOGIN AND REGISTER */
+
+.auth-wrap {
+    background: linear-gradient(110deg, #eee7ff, #fff8df);
+    padding: 65px 5%;
+    min-height: 70vh;
+}
+
+.auth-card {
+    max-width: 480px;
+    margin: auto;
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px #ddd;
+    text-align: center;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    text-align: left;
+}
+
+.auth-form label {
+    color: #444;
+    font-weight: bold;
+}
+
+.auth-form button {
+    width: 100%;
+}
+
+.auth-card a {
+    color: #5428c7;
+    font-weight: bold;
+}
+
+.id-note {
+    background: #fff8df;
+    padding: 14px;
+    border-radius: 8px;
+    color: #66531d;
+    text-align: left;
+    margin-top: 18px;
+    line-height: 1.6;
+}
+
+/* FOOTER */
+
+.page-footer {
+    background: #24134f;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+.page-footer h2 {
+    margin-bottom: 10px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 850px) {
+    header {
+        justify-content: center;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 65px 6%;
+    }
+
+    .hero-text h1 {
+        font-size: 42px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .discount {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .section-title {
+        font-size: 29px;
+    }
+
+    .auth-card {
+        padding: 25px 18px;
+    }
+}

@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offers | SAU POOL</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js" defer></script>
+</head>
+<body>
+
+<header>
+    <div class="logo">SAU <span>POOL</span><b>.</b></div>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="categories.html">Categories</a>
+        <a href="offers.html">Offers</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html" class="login-btn">Login</a>
+    </nav>
+</header>
+
+<main>
+<section class="offers-section">
+    <h1 class="section-title">Latest Offers</h1>
+    <p class="section-description">
+        Enjoy student-friendly sample discounts across popular categories.
+    </p>
+
+    <div class="search-box">
+        <input type="text" id="offerSearch" placeholder="Search offers...">
+    </div>
+
+    <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="restaurants">Restaurants</button>
+        <button class="filter-btn" data-filter="shopping">Shopping</button>
+        <button class="filter-btn" data-filter="beauty">Beauty</button>
+        <button class="filter-btn" data-filter="cafes">Cafes</button>
+        <button class="filter-btn" data-filter="fitness">Fitness</button>
+    </div>
+
+    <button id="showFavourites" class="favourites-toggle">
+        ♥ Show My Favourites
+    </button>
+
+    <p id="offerCount" style="margin:15px;color:#65558a;"></p>
+
+    <div class="offer-container" id="offerList">
+
+        <article class="offer-card offer" data-category="restaurants">
+            <button class="offer-favourite">♡</button>
+            <h2>🍔 Restaurants</h2>
+            <h1>20% OFF</h1>
+            <p>Sample discount on selected food orders.</p>
+        </article>
+
+        <article class="offer-card offer" data-category="shopping">
+            <button class="offer-favourite">♡</button>
+            <h2>🛍️ Shopping</h2>
+            <h1>15% OFF</h1>
+            <p>Sample discount at selected stores.</p>
+        </article>
+
+        <article class="offer-card offer" data-category="beauty">
+            <button class="offer-favourite">♡</button>
+            <h2>💇 Beauty & Salon</h2>
+            <h1>10% OFF</h1>
+            <p>Sample discount on selected salon services.</p>
+        </article>
+
+        <article class="offer-card offer" data-category="cafes">
+            <button class="offer-favourite">♡</button>
+            <h2>☕ Cafes</h2>
+            <h1>15% OFF</h1>
+            <p>Sample discount on cafe orders.</p>
+        </article>
+
+        <article class="offer-card offer" data-category="fitness">
+            <button class="offer-favourite">♡</button>
+            <h2>🏋️ Fitness</h2>
+            <h1>Special Price</h1>
+            <p>Sample student pricing for gym memberships.</p>
+        </article>
+
+    </div>
+
+    <p id="noOffers" class="notice" hidden>No offers match your search.</p>
+
+    <p class="notice">
+        These are demonstration offers for the project, not confirmed
+        discounts from the named businesses. Please check with each
+        business before using an offer.
+    </p>
+</section>
+</main>
+
+<footer class="page-footer">
+    <h2>SAU <span>POOL.</span></h2>
+    <p>Discover Deals. Save More. Live Better.</p>
+    <p>© 2026 SAU POOL. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
