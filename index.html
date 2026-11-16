@@ -1,224 +1,41 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAU POOL - Discover Local Deals</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js" defer></script>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rushnan Islam — B.Tech CSE student portfolio">
+  <title>Rushnan Islam | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"><script src="script.js" defer></script>
 </head>
 <body>
-
-<header>
-    <div class="logo">SAU <span>POOL</span><b>.</b></div>
-
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="pages/categories.html">Categories</a>
-        <a href="pages/offers.html">Offers</a>
-        <a href="pages/about.html">About</a>
-        <a href="pages/contact.html">Contact</a>
-        <a href="pages/login.html" class="login-btn">Login</a>
-    </nav>
-</header>
-
+<header class="site-header"><nav class="nav wrap">
+  <a class="brand" href="index.html">RI<span>.</span></a>
+  <button class="menu-btn" aria-label="Toggle menu" aria-expanded="false">☰</button>
+  <div class="nav-links"><a class="active" href="index.html">Home</a><a href="about.html">About</a><a href="skills.html">Skills</a><a href="projects.html">Projects</a><a href="internship.html">Internship</a><a class="nav-contact" href="contact.html">Contact ↗</a></div>
+</nav></header>
 <main>
-
-    <!-- HOME SECTION -->
-    <section class="hero">
-        <div class="hero-text">
-            <p class="welcome">WELCOME TO SAU POOL</p>
-
-            <h1>
-                Discover Local <span>Deals</span><br>
-                Around SAU!
-            </h1>
-
-            <p>
-                Find the best restaurants, cafes, shops and services
-                near South Asian University with exclusive student discounts.
-            </p>
-
-            <p>
-                SAU POOL makes student life easier by bringing nearby
-                offers together in one place. Instead of checking different
-                social media pages or asking friends about discounts,
-                students can browse categories, search places and compare deals.
-            </p>
-
-            <p>
-                Explore places around Chhattarpur and nearby South Delhi,
-                save favourite offers and carry your SAU student ID
-                when visiting participating businesses.
-            </p>
-
-            <div class="hero-buttons">
-                <a href="pages/offers.html" class="primary">
-                    Explore Offers →
-                </a>
-
-                <a href="pages/categories.html" class="secondary">
-                    Browse Categories
-                </a>
-            </div>
-        </div>
-
-        <div class="discount">
-            <h3>STUDENT SPECIAL</h3>
-            <h2>20%</h2>
-            <h3>OFF</h3>
-            <p>EXCLUSIVE SAU DEALS</p>
-        </div>
-    </section>
-
-    <!-- HOW IT HELPS -->
-    <section class="help-section">
-        <h1 class="section-title">How SAU POOL Helps Students</h1>
-
-        <p class="section-description">
-            Everything students need to discover local savings more easily.
-        </p>
-
-        <div class="reason-grid">
-
-            <div class="reason-card">
-                <div class="emoji">📍</div>
-                <h3>Find Nearby Places</h3>
-                <p>
-                    Discover restaurants, cafes, salons and services
-                    around Chhattarpur and South Delhi.
-                </p>
-            </div>
-
-            <div class="reason-card">
-                <div class="emoji">💰</div>
-                <h3>Save Money</h3>
-                <p>
-                    Check student deals before spending on food,
-                    shopping and daily services.
-                </p>
-            </div>
-
-            <div class="reason-card">
-                <div class="emoji">🔎</div>
-                <h3>Easy Search</h3>
-                <p>
-                    Search by category or business name instead
-                    of checking many different websites.
-                </p>
-            </div>
-
-            <div class="reason-card">
-                <div class="emoji">🎓</div>
-                <h3>Student Friendly</h3>
-                <p>
-                    Find student-focused offers and use your
-                    physical SAU ID card for in-person verification
-                    where accepted.
-                </p>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- CATEGORIES -->
-    <section class="category-section">
-        <h1 class="section-title">Explore Categories</h1>
-
-        <p class="section-description">
-            Choose a category to discover nearby places.
-        </p>
-
-        <div class="categories">
-
-            <a href="pages/categories.html#restaurants" class="category-card">
-                <div class="emoji">🍔</div>
-                <h3>Restaurants</h3>
-                <p>Food and dining offers</p>
-            </a>
-
-            <a href="pages/categories.html#cafes" class="category-card">
-                <div class="emoji">☕</div>
-                <h3>Cafes</h3>
-                <p>Coffee and hangout spots</p>
-            </a>
-
-            <a href="pages/categories.html#shopping" class="category-card">
-                <div class="emoji">🛍️</div>
-                <h3>Shopping</h3>
-                <p>Stores and daily needs</p>
-            </a>
-
-            <a href="pages/categories.html#beauty" class="category-card">
-                <div class="emoji">💇</div>
-                <h3>Beauty & Salon</h3>
-                <p>Beauty services</p>
-            </a>
-
-            <a href="pages/categories.html#fitness" class="category-card">
-                <div class="emoji">🏋️</div>
-                <h3>Fitness</h3>
-                <p>Gyms and fitness</p>
-            </a>
-
-            <a href="pages/categories.html#entertainment" class="category-card">
-                <div class="emoji">🎬</div>
-                <h3>Entertainment</h3>
-                <p>Fun activities</p>
-            </a>
-
-        </div>
-    </section>
-
-    <!-- LATEST OFFERS -->
-    <section class="offers-section">
-        <h1 class="section-title">Latest Offers</h1>
-
-        <p class="section-description">
-            Sample student offers across popular categories.
-        </p>
-
-        <div class="offer-container">
-
-            <div class="offer-card">
-                <h2>🍔 Restaurants</h2>
-                <h1>20% OFF</h1>
-                <p>Special discounts on food.</p>
-            </div>
-
-            <div class="offer-card">
-                <h2>🛍️ Shopping</h2>
-                <h1>15% OFF</h1>
-                <p>Save money while shopping.</p>
-            </div>
-
-            <div class="offer-card">
-                <h2>💇 Beauty & Salon</h2>
-                <h1>10% OFF</h1>
-                <p>Enjoy beauty services for less.</p>
-            </div>
-
-            <div class="offer-card">
-                <h2>☕ Cafes</h2>
-                <h1>15% OFF</h1>
-                <p>Special coffee and cafe deals.</p>
-            </div>
-
-        </div>
-
-        <a href="pages/offers.html" class="primary">
-            View All Offers →
-        </a>
-    </section>
-
+<section class="hero wrap">
+  <div class="hero-copy reveal">
+    <p class="eyebrow"><span class="pulse"></span> B.TECH CSE STUDENT · SOUTH ASIAN UNIVERSITY</p>
+    <h1>Curious mind.<br><span class="gradient">Creative builder.</span></h1>
+    <p class="lead">Hey, I'm <strong>Rushnan Islam</strong> — a first-semester Computer Science student exploring code, creativity and the endless possibilities of the web.</p>
+    <div class="actions"><a class="btn btn-primary" href="projects.html">Explore my work <span>↗</span></a><a class="btn btn-ghost" href="about.html">Get to know me</a></div>
+    <p class="tiny-note">Currently learning, experimenting & building one step at a time.</p>
+  </div>
+  <div class="hero-visual reveal">
+    <div class="blob blob-a"></div><div class="blob blob-b"></div>
+    <div class="profile-card"><div class="card-top"><span></span><span></span><span></span><small>rushnan.exe</small></div>
+      <div class="avatar">R<span>.</span></div><p class="code-line"><b>const</b> student = {</p><p class="code-line indent">field: <i>"Computer Science"</i>,</p><p class="code-line indent">university: <i>"SAU"</i>,</p><p class="code-line indent">mindset: <i>"keep_learning"</i></p><p class="code-line">};</p>
+      <div class="card-footer"><span>✦ OPEN TO LEARNING</span><span class="mini-dot"></span></div>
+    </div>
+    <span class="sticker sticker-one">HTML</span><span class="sticker sticker-two">CSS</span><span class="sticker sticker-three">C / Java</span>
+  </div>
+</section>
+<section class="ticker"><div>DESIGN ✳ CODE ✳ CREATE ✳ LEARN ✳ REPEAT ✳ DESIGN ✳ CODE ✳ CREATE ✳ LEARN ✳ REPEAT ✳</div></section>
+<section class="section wrap intro-grid reveal"><div><p class="eyebrow">A QUICK INTRO</p><h2>Building my<br><span class="gradient">first chapters.</span></h2></div><div><p class="lead">I'm at the beginning of my tech journey, developing a strong foundation in programming and web development. This portfolio is a space to document what I learn and the things I create along the way.</p><a class="text-link" href="about.html">More about me <span>↗</span></a></div></section>
+<section class="section highlight-section"><div class="wrap highlight-inner"><div><p class="eyebrow">THE JOURNEY SO FAR</p><h2>Small steps.<br><span class="gradient">Big possibilities.</span></h2></div><div class="stat-grid"><div class="stat"><strong>01</strong><span>Semester</span></div><div class="stat"><strong>04</strong><span>Languages & tools</span></div><div class="stat"><strong>∞</strong><span>Things to learn</span></div></div></div></section>
 </main>
-
-<footer class="page-footer">
-    <h2>SAU <span>POOL.</span></h2>
-    <p>Discover Deals. Save More. Live Better.</p>
-    <p>© 2026 SAU POOL. All Rights Reserved.</p>
-</footer>
-
-</body>
-</html>
+<footer class="footer wrap"><a class="brand" href="index.html">RI<span>.</span></a><p>Designed & built by Rushnan Islam · 2026</p><a href="contact.html">Say hello ↗</a></footer>
+</body></html>
