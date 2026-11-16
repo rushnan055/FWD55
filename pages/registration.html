@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration | SAU POOL</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js" defer></script>
+</head>
+<body>
+
+<header>
+    <div class="logo">SAU <span>POOL</span><b>.</b></div>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="categories.html">Categories</a>
+        <a href="offers.html">Offers</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html" class="login-btn">Login</a>
+    </nav>
+</header>
+
+<main>
+<section class="auth-wrap">
+    <div class="auth-card">
+        <h1 class="section-title">Student Registration</h1>
+        <p class="section-description">
+            Create your SAU POOL demo account.
+        </p>
+
+        <form id="registerForm" class="auth-form">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName"
+                   placeholder="Your full name" required>
+
+            <label for="regEmail">SAU Email</label>
+            <input type="email" id="regEmail"
+                   placeholder="Enter your SAU email" required>
+
+            <label for="regPassword">Password</label>
+            <input type="password" id="regPassword"
+                   minlength="6" placeholder="At least 6 characters" required>
+
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" id="confirmPassword"
+                   minlength="6" placeholder="Re-enter your password" required>
+
+            <button class="primary" type="submit">Register</button>
+
+            <p id="registerFeedback" class="form-feedback"></p>
+        </form>
+
+        <p style="margin-top:18px;">
+            Already registered?
+            <a href="login.html">Login here</a>
+        </p>
+
+        <div class="id-note">
+            <strong>Physical SAU ID card accepted:</strong>
+            Students can also show their physical SAU student ID card
+            for in-person verification at participating businesses.
+        </div>
+    </div>
+</section>
+</main>
+
+<footer class="page-footer">
+    <h2>SAU <span>POOL.</span></h2>
+    <p>Discover Deals. Save More. Live Better.</p>
+    <p>© 2026 SAU POOL. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
